@@ -8,6 +8,7 @@ import (
 type Age int
 
 type Number interface {
+	// type approximation
 	~int | int8 | int16 | int32 | int64 |
 		float32 | float64
 }
@@ -29,6 +30,7 @@ func TestMin(t *testing.T) {
 
 func TestMinTypeInference(t *testing.T) {
 	assert.Equal(t, 100, Min(100, 200))
+	// type inference
 	assert.Equal(t, int64(100), Min(int64(100), int64(200)))
 	assert.Equal(t, float64(100), Min(float64(100), float64(200)))
 	assert.Equal(t, Age(100), Min(Age(100), Age(200)))
