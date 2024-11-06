@@ -13,6 +13,8 @@ func PrintBag[T any](bag Bag[T]) {
 	}
 }
 
+// mantap nih type genereic
+
 func TestBagString(t *testing.T) {
 	names := Bag[string]{"Eko", "Kurniawan", "Khannedy"}
 	PrintBag(names)
